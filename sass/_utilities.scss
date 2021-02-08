@@ -1,0 +1,73 @@
+// mixin
+@mixin positiontrbl($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// Container 
+.container {
+    width: $full-width;
+    max-width: $fixed-width;
+    margin: auto;
+}
+
+// Flex box
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex: 0 0 50%;
+    display: flex;
+    padding: 0 15px;
+}
+
+// positioning Class
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+// Flex box class
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-bottom {
+    align-items: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-right {
+    align-items: flex-end;
+}
+
+// hide & show
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+// Margin
+.ml-auto {
+    margin-left: auto;
+}
+
+// Padding
