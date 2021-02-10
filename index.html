@@ -8,33 +8,139 @@
     <title>Ashiqul Islam</title>
 
     <!-- External Link -->
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
 
     <!-- Font awesome link -->
     <script src="https://kit.fontawesome.com/9501597931.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="flex align-items-center">
-        <div class="container row nav-bar">
+    <!-- Header Section(Navigation Bar & Brand) End -->
+    <header class="nav-bar">
+        <div class="container row">
             <div class="nav-brand col-2">
                 <a href="index.html">AI</a>
             </div>
-            <nav class="nav col-2 show">
-                <ul class="flex justify-content-center">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="#testimonial" class="nav-link">Testimonial</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger-menu hide">
-                <span class="show"><i class="fas fa-bars"></i></span>
-                <span class="hide"><i class="fas fa-times"></i></span>
-            </div>
+            <ul class="nav col-3 flex justify-content-right">
+                <li class="nav-item"><a href="#" class="nav-link">home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">portfolio</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+            </ul>
         </div>
     </header>
+    <!-- Header Section(Navigation Bar & Brand) End -->
+
+    <!-- Home Section Start -->
+    <section class="home-section">
+        <div class="container row align-items-center">
+            <div class="col-2 home-text">
+                <p>Hello</p>
+                <h2>I'm <span> Ashiqul Islam </span></h2>
+                <h1>Web Designer & Developer</h1>
+                <a href="#about" class="btn btn-about">More About Me</a>
+            </div>
+            <div class="col-2 home-img">
+                <div class="img-box">
+                    <img src="src/img/Ashiqul-Islam.png" alt="Ashiqul-Islam">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Section End -->
+
+    <!-- About Section Start -->
+    <section class="about-section section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2 data-heading="main-info">About Me</h2>
+                </div>
+            </div>
+            <div class="row about-me">
+                <div class="col-2 about-img">
+                    <div class="img-box">
+                        <img src="src/img/Ashiqul-Islam.png" alt="Ashiqul-Islam">
+                        <div class="social-media flex">
+                            <a href="#" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="social-link linkedin-in"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" target="_blank" class="social-link github"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 about-description">
+                    <p>Hey! I'm <span>Ashiqul Islam.</span> I'm a Front-End Developer. I have been 2 years experiences this area. I can build a website front-end with HTML, CSS, SCSS, JavaScript, jquery & bootstrap. </p>
+                    <p>If you have any special requirements like only HTML, SCSS & Pure JavaScript I also can do it or You wanna make a website only using HTML, CSS bootstrap & jquery, I also make it. </p>
+                    <p>You can see my portfolio in the portfolio section for your website. After seeing my portfolio you can contact me or you can order me direct with your requirement. The order button is the right corner of this page. So let's begin. </p>
+                    <p>I have also client feedback. You can check this section what client say about me?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Testimonial section Start -->
+    <section class="testimonial-section section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2 data-heading="testimonial">What Client Say?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 testimonial-item">
+                    <div class="testimonial-inner">
+                        i
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial section End -->
+
+    <!-- Contact Section Start -->
+    <section class="contact-section section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2 data-heading="Contact">Get in touch</h2>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-2 form-left ">
+                        <div class="contact-img text-center">
+                            <div class="img-box">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <p>If you have any question or just want to get in touch, use the form. We look forward to hearing from you!</p>
+                        </div>
+                    </div>
+                    <div class="col-2 form-right">
+                        <div class="input-group">
+                            <input type="text" name="Name" id="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="input-group">
+                            <textarea name="Message" id="message" cols="30" rows="10" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="input-group text-right">
+                            <input type="submit" value="Send" class="btn btn-submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+
+
     <!-- External JavaScript -->
     <script src="src/js/script.js"></script>
 </body>

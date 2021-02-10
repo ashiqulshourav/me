@@ -1,15 +1,21 @@
 // mixin
-@mixin positiontrbl($top, $right, $bottom, $left) {
+@mixin positionTopRightBottomLeft($position, $top, $right, $bottom, $left) {
+    position: $position;
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
 }
 
+@mixin transition {
+    transition: 0.3s all ease-in-out;
+}
+
 // Container 
 .container {
     width: $full-width;
     max-width: $fixed-width;
+    height: 100%;
     margin: auto;
 }
 
@@ -19,19 +25,33 @@
     flex-wrap: wrap;
 }
 
+.col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 1.5rem;
+}
+
+.col-1 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 1.5rem;
+}
+
 .col-2 {
     flex: 0 0 50%;
-    display: flex;
-    padding: 0 15px;
+    max-width: 50%;
+    padding: 0 1.5rem;
+}
+
+.col-3 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding: 0 1.5rem;
 }
 
 // positioning Class
 .relative {
     position: relative;
-}
-
-.absolute {
-    position: absolute;
 }
 
 // Flex box class
@@ -53,7 +73,7 @@
 }
 
 .justify-content-right {
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 // hide & show
@@ -71,3 +91,59 @@
 }
 
 // Padding
+// text-align
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Button
+.btn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $skin-color-0;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: .2rem solid $skin-color-0;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: capitalize;
+    margin-top: 3rem;
+    @include transition;
+}
+
+.btn:hover {
+    background-color: $text-color-1;
+    color: $bg-white-full;
+    border-color: $text-color-1;
+}
+
+// Section 
+.section {
+    min-height: 100vh;
+    padding: 8rem 0;
+    .section-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 1.5rem;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: $text-color-0;
+            font-weight: 700;
+            margin: 0;
+        }
+        h2::before {
+            content: attr(data-heading);
+            display: block;
+            color: $skin-color-0;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+    }
+}
