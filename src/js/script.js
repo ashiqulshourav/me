@@ -1,3 +1,52 @@
+// Fixed Navigation bar scroll Effect
+(() => {
+    const navBar = document.querySelector('.nav-bar'),
+        navItems = navBar.querySelectorAll('.nav-item');
+
+    // active nav link
+    navItems.forEach((item) => {
+        item.addEventListener('click', (event) => {
+            if (event.target.closest('.nav-link') && !event.target.classList.contains('active')) {
+                navBar.querySelector('.active').classList.remove('active');
+                event.target.classList.add('active');
+            };
+        });
+    });
+
+    // window scroll effect
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            navBar.classList.add('fixed')
+        } else {
+            navBar.classList.remove('fixed')
+        }
+
+        let navLinks = document.querySelectorAll(".nav-link");
+
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+            let navHeight = document.querySelector('.nav-bar').offsetHeight;
+
+            if (section.offsetTop <= fromTop + navHeight && section.offsetTop + section.offsetHeight > fromTop + navHeight) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href'),
+                    offsetTop = document.querySelector(href).offsetTop;
+
+                scroll({ top: offsetTop - navHeight, behavior: 'smooth' })
+            });
+        });
+    });
+})();
+
+
 /* Portfolio Item Activate */
 (() => {
     const filterContainer = document.querySelector('.portfolio-filter'),

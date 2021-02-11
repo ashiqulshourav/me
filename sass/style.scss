@@ -65,9 +65,14 @@
     
     // header & Navigation bar
     .nav-bar {
-        height: 8rem;
         background-color: $bg-white-top;
-        line-height: 8rem;
+        @include transition;
+        .container {
+            height: 8rem;
+            align-items: center;
+            background-color: $bg-white-top;
+            @include transition;
+        }
         a {
             display: inline-block;
             color: $text-color-0;
@@ -102,6 +107,11 @@
                 }
                 .nav-link:hover {
                     color: $skin-color-0;
+                    box-shadow: inset 0 -3px 0 $skin-color-0;
+                }
+                .nav-link.active {
+                    color: $skin-color-0;
+                    box-shadow: inset 0 -3px 0 $skin-color-0;
                 }
             }
             .nav-item:last-child {
@@ -110,9 +120,19 @@
         }
     }
     
+    .nav-bar.fixed {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    
     //Home section
     .home-section {
         background-color: $bg-white-top;
+        padding: 3rem 0;
         .row {
             min-height: 70vh;
             background-color: inherit;
@@ -262,6 +282,7 @@
     
     // Testimonial Section
     .testimonial-section {
+        // margin-top: 1px;
         .testimonial-item {
             margin-top: 6rem;
             transform: translateY(0);
@@ -724,7 +745,7 @@
     .footer-section {
         min-height: 20vh;
         padding: 4rem 0;
-        background-color: $skin-color-0;
+        background-color: $bg-white-top;
         .nav {
             .nav-item {
                 margin: 0 1.5rem;
