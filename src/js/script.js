@@ -40,7 +40,7 @@
                 const href = link.getAttribute('href'),
                     offsetTop = document.querySelector(href).offsetTop;
 
-                scroll({ top: offsetTop - navHeight, behavior: 'smooth' })
+                scroll({ top: offsetTop - navHeight, behavior: 'smooth' });
             });
         });
     });

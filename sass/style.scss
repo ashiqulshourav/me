@@ -125,7 +125,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 99999;
+        z-index: 1000;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
     
@@ -282,7 +282,7 @@
     
     // Testimonial Section
     .testimonial-section {
-        // margin-top: 1px;
+        margin-top: 1px;
         .testimonial-item {
             margin-top: 6rem;
             transform: translateY(0);
@@ -526,7 +526,7 @@
         width: 100%;
         height: 100%;
         background-color: #fff;
-        z-index: 1000;
+        z-index: 10000;
         overflow-y: scroll;
         opacity: 0;
         visibility: hidden;
