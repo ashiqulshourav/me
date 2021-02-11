@@ -31,12 +31,6 @@
     padding: 0 1.5rem;
 }
 
-.col-1 {
-    flex: 0 0 25%;
-    max-width: 25%;
-    padding: 0 1.5rem;
-}
-
 .col-2 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -44,8 +38,14 @@
 }
 
 .col-3 {
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1.5rem;
+}
+
+.col-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
     padding: 0 1.5rem;
 }
 
