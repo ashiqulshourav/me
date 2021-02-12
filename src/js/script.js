@@ -1,7 +1,26 @@
 // Fixed Navigation bar scroll Effect
 (() => {
     const navBar = document.querySelector('.nav-bar'),
-        navItems = navBar.querySelectorAll('.nav-item');
+        nav = navBar.querySelector('.nav'),
+        navItems = navBar.querySelectorAll('.nav-item'),
+        hamburgerMenu = navBar.querySelector('.hamburger-menu'),
+        bars = hamburgerMenu.querySelector('i');
+
+    // Nav hide & show
+    hamburgerMenu.addEventListener('click', () => {
+        navToggle();
+    });
+
+    function navToggle() {
+        if (bars.classList.contains('fa-bars')) {
+            bars.classList.remove('fa-bars');
+            bars.classList.add('fa-times');
+        } else {
+            bars.classList.remove('fa-times');
+            bars.classList.add('fa-bars');
+        }
+        nav.classList.toggle('open')
+    };
 
     // active nav link
     navItems.forEach((item) => {
@@ -10,6 +29,7 @@
                 navBar.querySelector('.active').classList.remove('active');
                 event.target.classList.add('active');
             };
+            navToggle();
         });
     });
 
@@ -43,6 +63,14 @@
                 scroll({ top: offsetTop - navHeight, behavior: 'smooth' });
             });
         });
+
+        // Window scroll navigation menu hide
+        if (bars.classList.contains('fa-times')) {
+            bars.classList.remove('fa-times');
+            bars.classList.add('fa-bars');
+            nav.classList.toggle('open')
+        }
+
     });
 })();
 

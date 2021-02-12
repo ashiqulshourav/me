@@ -118,6 +118,27 @@
                 margin-right: 0;
             }
         }
+        .hamburger-menu {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            cursor: pointer;
+            display: none;
+            span {
+                display: inline-block;
+                width: 4rem;
+                height: 4rem;
+                text-align: center;
+                border-radius: 50%;
+                border: .2rem solid $skin-color-0;
+                i {
+                    font-size: 2rem;
+                    color: $skin-color-0;
+                    line-height: 3.6rem;
+                    @include transition;
+                }
+            }
+        }
     }
     
     .nav-bar.fixed {
@@ -132,7 +153,7 @@
     //Home section
     .home-section {
         background-color: $bg-white-top;
-        padding: 3rem 0;
+        padding: 4rem 0;
         .row {
             min-height: 70vh;
             background-color: inherit;
@@ -696,10 +717,10 @@
                 }
             }
             .pp-prev {
-                left: 2.5rem;
+                left: 1.5rem;
             }
             .pp-next {
-                right: 2.5rem;
+                right: 1.5rem;
             }
             .pp-loader {
                 position: fixed;
@@ -786,5 +807,78 @@
                 color: $text-color-0;
                 font-size: 1.4rem;
             }
+        }
+    }
+    
+    // Responsive
+    @media (max-width: 991px) {
+        .home-section .home-text h2 {
+            font-size: 4rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .nav-bar {
+            position: relative;
+            z-index: 1000;
+            .container {
+                height: 6rem;
+                position: relative;
+            }
+            .nav {
+                flex: 0 0 100%;
+                max-width: 100%;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 6rem;
+                left: 0;
+                width: 100%;
+                background-color: $bg-white-top;
+                transform: translateX(100%);
+                @include transition;
+                .nav-item {
+                    margin: 1rem 0;
+                }
+            }
+            .nav.open {
+                transform: translateX(0);
+            }
+            .hamburger-menu {
+                display: block;
+            }
+        }
+        .col-2 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .col-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .home-section {
+            .home-text {
+                text-align: center;
+                order: 2;
+            }
+            .home-img {
+                padding-bottom: 6rem;
+                .img-box {
+                    max-width: 350px;
+                }
+            }
+        }
+        .about-section .about-me .about-img {
+            padding-bottom: 3rem;
+        }
+        .about-section .about-me .about-img .img-box {
+            max-width: 30rem;
+        }
+        .about-section .about-me .about-description p {
+            margin-bottom: 2rem;
+        }
+        .testimonial-items {
+            justify-content: center;
         }
     }
