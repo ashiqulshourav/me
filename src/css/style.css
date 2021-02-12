@@ -1244,20 +1244,6 @@ body.hide-scrolling {
   background-color: #d3e0ea;
 }
 
-.footer-section .nav .nav-item {
-  margin: 0 1.5rem;
-}
-
-.footer-section .nav .nav-item .nav-link {
-  text-transform: capitalize;
-  -webkit-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
-}
-
-.footer-section .nav .nav-item:hover .nav-link {
-  color: #f6f5f5;
-}
-
 .footer-section .social-media {
   margin-top: 2rem;
 }
@@ -1445,7 +1431,6 @@ body.hide-scrolling {
     height: 3rem;
     line-height: 2.6rem;
   }
-  .footer-section .nav,
   .footer-section .social-media {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
