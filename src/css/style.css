@@ -760,8 +760,8 @@ body.hide-scrolling {
 }
 
 .testimonial-section .testimonial-item:hover {
-  -webkit-transform: translateY(-2rem);
-          transform: translateY(-2rem);
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
 }
 
 .testimonial-section .testimonial-item:hover .testimonial-inner {
@@ -1240,7 +1240,7 @@ body.hide-scrolling {
 
 .footer-section {
   min-height: 20vh;
-  padding: 6rem 0 1rem;
+  padding: 4rem 0 1rem;
   background-color: #d3e0ea;
 }
 

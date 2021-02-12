@@ -376,7 +376,7 @@
             }
         }
         .testimonial-item:hover {
-            transform: translateY(-2rem);
+            transform: translateY(-1rem);
             .testimonial-inner {
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
@@ -765,7 +765,7 @@
     // Footer Section
     .footer-section {
         min-height: 20vh;
-        padding: 6rem 0 1rem;
+        padding: 4rem 0 1rem;
         background-color: $bg-white-top;
         .social-media {
             margin-top: 2rem;
@@ -936,8 +936,7 @@
             height: 3rem;
             line-height: 2.6rem;
         }
-        .footer-section .social-media,
-        {
+        .footer-section .social-media {
             justify-content: center;
         }
     }
