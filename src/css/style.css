@@ -1240,7 +1240,7 @@ body.hide-scrolling {
 
 .footer-section {
   min-height: 20vh;
-  padding: 4rem 0;
+  padding: 6rem 0 1rem;
   background-color: #d3e0ea;
 }
 
@@ -1288,18 +1288,28 @@ body.hide-scrolling {
 .footer-section .copyright p {
   color: #276678;
   font-size: 1.4rem;
+  margin-bottom: 1.2rem;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .home-section .home-text h2 {
     font-size: 4rem;
   }
-}
-
-@media (max-width: 768px) {
+  .portfolio-popup .pp-main {
+    max-width: 99.01rem;
+  }
+  .portfolio-popup .pp-details {
+    max-width: 99.01rem;
+  }
+  .col-3 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
   .nav-bar {
     position: relative;
-    z-index: 1000;
+    z-index: 999;
   }
   .nav-bar .container {
     height: 6rem;
@@ -1325,8 +1335,8 @@ body.hide-scrolling {
     left: 0;
     width: 100%;
     background-color: #d3e0ea;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
     -webkit-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
   }
@@ -1334,23 +1344,11 @@ body.hide-scrolling {
     margin: 1rem 0;
   }
   .nav-bar .nav.open {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .nav-bar .hamburger-menu {
     display: block;
-  }
-  .col-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .col-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
   }
   .home-section .home-text {
     text-align: center;
@@ -1364,6 +1362,23 @@ body.hide-scrolling {
   .home-section .home-img .img-box {
     max-width: 350px;
   }
+  .testimonial-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-section {
+    min-height: 65vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-2 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
   .about-section .about-me .about-img {
     padding-bottom: 3rem;
   }
@@ -1372,8 +1387,66 @@ body.hide-scrolling {
   }
   .about-section .about-me .about-description p {
     margin-bottom: 2rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
   }
-  .testimonial-items {
+  .contact-section form .form-left {
+    padding: 6rem;
+    margin-bottom: 3rem;
+  }
+  .section .section-title h2 {
+    font-size: 2.4rem;
+  }
+  .portfolio-popup .pp-main {
+    max-width: 76.8rem;
+  }
+  .portfolio-popup .pp-details {
+    max-width: 99.01rem;
+  }
+  .portfolio-popup .pp-details .pp-details-inner .pp-project-details .description,
+  .portfolio-popup .pp-details .pp-details-inner .pp-project-details .info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .portfolio-popup .pp-details .pp-details-inner .pp-project-details .info {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-3 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home-section .home-img .img-box {
+    max-width: 30rem;
+  }
+  .home-section .home-text h2 {
+    font-size: 3rem;
+  }
+  .home-section .home-text h1 {
+    font-size: 1.8rem;
+  }
+  .btn {
+    padding: .7rem 1.5rem;
+  }
+  .about-section .about-me .about-img .img-box {
+    max-width: 25rem;
+  }
+  .testimonial-section .testimonial-item .testimonial-inner .client-info h4 {
+    font-size: 1.8rem;
+  }
+  .testimonial-section .testimonial-item .testimonial-inner .client-info .client-social-link a {
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.6rem;
+  }
+  .footer-section .nav,
+  .footer-section .social-media {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
