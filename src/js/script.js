@@ -229,3 +229,111 @@
 function bodyNoScrolling() {
     document.body.classList.toggle('hide-scrolling');
 }
+
+// form Validation 
+(() => {
+    //declare with variable
+    const contact = document.querySelector('.contact-section'),
+        form = contact.querySelector('form'),
+        Submit = form.querySelector('#submit');
+
+    // after form submitting 
+    form.addEventListener('submit', (e) => {
+        formValidation(e);
+    });
+
+
+    // after click submit button
+    Submit.addEventListener('click', (e) => {
+        formValidation(e);
+    });
+
+
+    // Validation Main function
+    function formValidation(e) {
+        e.preventDefault();
+
+        var name = form.querySelector('#name'),
+            email = form.querySelector('#email'),
+            message = form.querySelector('#message'),
+
+            nameValue = form.querySelector('#name').value,
+            emailValue = form.querySelector('#email').value,
+            messageValue = form.querySelector('#message').value,
+
+            nameNumber = parseFloat(nameValue),
+
+            errorName = form.querySelector('.name .error'),
+            errorEmail = form.querySelector('.email .error'),
+            errorMsg = form.querySelector('.message .error'),
+
+            errorNameMessage,
+            errorEmailMessage,
+            errorMessage;
+
+
+        // if user input empty or message length is less than or equal 5
+        if (messageValue == "" || messageValue.length <= 5) {
+            errorMessage = "Please Enter Message";
+            errorMsg.classList.add('show');
+            errorMsg.innerText = errorMessage;
+            message.classList.add('error-color');
+        } else {
+            errorMessage = "";
+            errorMsg.classList.remove('show');
+            errorMsg.innerText = errorMessage;
+            message.classList.remove('error-color');
+        }
+
+        // If user input empty String in Name
+        if (nameValue == "" || nameValue.length === 0) {
+            nameEmpty();
+        } else if (nameNumber || nameValue.length <= 5) {
+            isNumber();
+        } else {
+            errorName.classList.remove('show');
+            errorName.innerText = "";
+            name.classList.remove('error-color')
+        }
+
+        // Email Validation
+        validateEmail(emailValue)
+
+        function validateEmail(emailValue) {
+            var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (emailValue.match(mailFormat)) {
+                errorEmailMessage = "";
+                errorEmail.classList.remove('show');
+                errorEmail.innerText = errorEmailMessage;
+                email.classList.remove('error-color');
+            } else {
+                errorEmailMessage = "Please Enter a Valid Email";
+                errorEmail.classList.add('show');
+                errorEmail.innerText = errorEmailMessage;
+                email.classList.add('error-color');
+            }
+        }
+
+        // if user input a blank Name
+        function nameEmpty() {
+            errorNameMessage = "Please Enter a Name";
+            showMessage();
+        }
+
+        // if user input a number
+        function isNumber() {
+            errorNameMessage = "Please Enter a Valid Name";
+            showMessage();
+        }
+
+
+        // Showing Message
+        function showMessage() {
+            errorName.classList.add('show');
+            errorName.innerText = errorNameMessage;
+            name.classList.add('error-color')
+        }
+
+    };
+
+})();
