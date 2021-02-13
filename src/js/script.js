@@ -279,6 +279,7 @@ function bodyNoScrolling() {
             errorMsg.innerText = errorMessage;
             message.classList.add('error-color');
         } else {
+            message.value = "";
             errorMessage = "";
             errorMsg.classList.remove('show');
             errorMsg.innerText = errorMessage;
@@ -291,9 +292,10 @@ function bodyNoScrolling() {
         } else if (nameNumber || nameValue.length <= 5) {
             isNumber();
         } else {
+            name.value = "";
             errorName.classList.remove('show');
             errorName.innerText = "";
-            name.classList.remove('error-color')
+            name.classList.remove('error-color');
         }
 
         // Email Validation
@@ -302,6 +304,7 @@ function bodyNoScrolling() {
         function validateEmail(emailValue) {
             var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             if (emailValue.match(mailFormat)) {
+                email.value = "";
                 errorEmailMessage = "";
                 errorEmail.classList.remove('show');
                 errorEmail.innerText = errorEmailMessage;
