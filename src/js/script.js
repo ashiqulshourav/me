@@ -280,12 +280,11 @@ function bodyNoScrolling() {
             errorMsg.innerText = errorMessage;
             message.classList.add('error-color');
         } else {
-            message.value = "";
+            message.value = `${messageValue}`;
             errorMessage = "";
             errorMsg.classList.remove('show');
             errorMsg.innerText = errorMessage;
             message.classList.remove('error-color');
-            successPopup();
         }
 
         // If user input empty String in Name
@@ -294,11 +293,10 @@ function bodyNoScrolling() {
         } else if (nameNumber || nameValue.length <= 5) {
             isNumber();
         } else {
-            name.value = "";
+            name.value = `${nameValue}`;
             errorName.classList.remove('show');
             errorName.innerText = "";
             name.classList.remove('error-color');
-            successPopup();
         }
 
         // Email Validation
@@ -307,12 +305,11 @@ function bodyNoScrolling() {
         function validateEmail(emailValue) {
             var mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             if (emailValue.match(mailFormat)) {
-                email.value = "";
                 errorEmailMessage = "";
+                email.value = `${emailValue}`
                 errorEmail.classList.remove('show');
                 errorEmail.innerText = errorEmailMessage;
                 email.classList.remove('error-color');
-                successPopup();
             } else {
                 errorEmailMessage = "Please Enter a Valid Email";
                 errorEmail.classList.add('show');
@@ -342,6 +339,14 @@ function bodyNoScrolling() {
         }
 
         // success popup
+        if (errorName.classList.contains('show') || errorEmail.classList.contains('show') || errorMsg.classList.contains('show')) {} else {
+            name.value = "";
+            email.value = "";
+            message.value = "";
+            successPopup();
+        }
+
+
         function successPopup() {
             if (success.classList.contains('hide')) {
                 success.classList.remove('hide')
@@ -351,7 +356,7 @@ function bodyNoScrolling() {
                 if (!success.classList.contains('hide')) {
                     success.classList.add('hide')
                 }
-            }, 3000)
+            }, 2000)
         }
     };
 
