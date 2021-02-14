@@ -256,6 +256,7 @@ function bodyNoScrolling() {
         var name = form.querySelector('#name'),
             email = form.querySelector('#email'),
             message = form.querySelector('#message'),
+            success = form.querySelector('.form-right .success'),
 
             nameValue = form.querySelector('#name').value,
             emailValue = form.querySelector('#email').value,
@@ -284,6 +285,7 @@ function bodyNoScrolling() {
             errorMsg.classList.remove('show');
             errorMsg.innerText = errorMessage;
             message.classList.remove('error-color');
+            successPopup();
         }
 
         // If user input empty String in Name
@@ -296,6 +298,7 @@ function bodyNoScrolling() {
             errorName.classList.remove('show');
             errorName.innerText = "";
             name.classList.remove('error-color');
+            successPopup();
         }
 
         // Email Validation
@@ -309,6 +312,7 @@ function bodyNoScrolling() {
                 errorEmail.classList.remove('show');
                 errorEmail.innerText = errorEmailMessage;
                 email.classList.remove('error-color');
+                successPopup();
             } else {
                 errorEmailMessage = "Please Enter a Valid Email";
                 errorEmail.classList.add('show');
@@ -337,6 +341,18 @@ function bodyNoScrolling() {
             name.classList.add('error-color')
         }
 
+        // success popup
+        function successPopup() {
+            if (success.classList.contains('hide')) {
+                success.classList.remove('hide')
+            }
+
+            setTimeout(function() {
+                if (!success.classList.contains('hide')) {
+                    success.classList.add('hide')
+                }
+            }, 3000)
+        }
     };
 
 })();
