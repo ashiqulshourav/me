@@ -565,30 +565,7 @@ body.hide-scrolling {
   max-width: 45rem;
   display: block;
   margin: auto;
-  border: 0.5rem solid #07090D;
   position: relative;
-}
-
-.home-section .home-img .img-box::before {
-  content: '';
-  position: absolute;
-  top: -2rem;
-  left: -2rem;
-  width: 4rem;
-  height: 4rem;
-  border-top: 0.5rem solid #07090D;
-  border-left: 0.5rem solid #07090D;
-}
-
-.home-section .home-img .img-box::after {
-  content: '';
-  position: absolute;
-  bottom: -2rem;
-  right: -2rem;
-  width: 4rem;
-  height: 4rem;
-  border-bottom: 0.5rem solid #07090D;
-  border-right: 0.5rem solid #07090D;
 }
 
 .about-section .about-me {
@@ -605,9 +582,9 @@ body.hide-scrolling {
 }
 
 .about-section .about-me .about-img .img-box .social-media {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2rem;
 }
 
@@ -619,6 +596,7 @@ body.hide-scrolling {
   border-radius: 50%;
   text-align: center;
   background-color: transparent;
+  margin: 0 1rem;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
@@ -653,14 +631,6 @@ body.hide-scrolling {
 
 .about-section .about-me .about-img .img-box .social-media .social-link.linkedin-in:hover i {
   color: #0a66c2;
-}
-
-.about-section .about-me .about-img .img-box .social-media .social-link.youtube:hover {
-  border-color: #ff0000;
-}
-
-.about-section .about-me .about-img .img-box .social-media .social-link.youtube:hover i {
-  color: #ff0000;
 }
 
 .about-section .about-me .about-img .img-box .social-media .social-link.github:hover {
@@ -1351,8 +1321,8 @@ body.hide-scrolling {
 }
 
 .footer-section {
-  min-height: 20vh;
-  padding: 4rem 0 1rem;
+  min-height: 10vh;
+  padding: 1rem;
   background-color: #d3e0ea;
 }
 

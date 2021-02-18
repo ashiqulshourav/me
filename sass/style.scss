@@ -201,28 +201,7 @@
                 max-width: 45rem;
                 display: block;
                 margin: auto;
-                border: .5rem solid $text-color-1;
                 position: relative;
-            }
-            .img-box::before {
-                content: '';
-                position: absolute;
-                top: -2rem;
-                left: -2rem;
-                width: 4rem;
-                height: 4rem;
-                border-top: .5rem solid $text-color-1;
-                border-left: .5rem solid $text-color-1;
-            }
-            .img-box::after {
-                content: '';
-                position: absolute;
-                bottom: -2rem;
-                right: -2rem;
-                width: 4rem;
-                height: 4rem;
-                border-bottom: .5rem solid $text-color-1;
-                border-right: .5rem solid $text-color-1;
             }
         }
     }
@@ -239,7 +218,7 @@
                         border: .5rem solid $text-color-0;
                     }
                     .social-media {
-                        justify-content: space-between;
+                        justify-content: center;
                         margin-top: 2rem;
                         .social-link {
                             display: inline-block;
@@ -249,6 +228,7 @@
                             border-radius: 50%;
                             text-align: center;
                             background-color: transparent;
+                            margin: 0 1rem;
                             @include transition;
                             i {
                                 line-height: 3.8rem;
@@ -273,12 +253,6 @@
                             border-color: #0a66c2;
                             i {
                                 color: #0a66c2;
-                            }
-                        }
-                        .social-link.youtube:hover {
-                            border-color: #ff0000;
-                            i {
-                                color: #ff0000;
                             }
                         }
                         .social-link.github:hover {
@@ -840,8 +814,8 @@
     
     // Footer Section
     .footer-section {
-        min-height: 20vh;
-        padding: 4rem 0 1rem;
+        min-height: 10vh;
+        padding: 1rem;
         background-color: $bg-white-top;
         .social-media {
             margin-top: 2rem;
